@@ -1,7 +1,9 @@
 import Hero from "./components/Hero";
 import Jobs from "./components/Jobs";
+import {getUser} from "@workos-inc/authkit-nextjs";
 
-export default function Home() {
+export default async function Home() {
+  const {user} = await getUser();
   return (
     <>
     <Hero />
